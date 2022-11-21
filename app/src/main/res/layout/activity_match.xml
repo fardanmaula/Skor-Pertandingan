@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Match">
+
+    <TextView
+        android:id="@+id/txt_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Home Team"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#fff"/>
+
+    <ImageView
+        android:id="@+id/home_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_home"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/score_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textSize="80sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_logo"
+        app:layout_constraintBottom_toTopOf="@id/btn_add_home1"
+        android:textColor="#fff"/>
+
+    <Button
+        android:id="@+id/btn_add_home1"
+        android:layout_width="310px"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Home + 1"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toStartOf="@id/btn_add_home2" />
+    <Button
+        android:id="@+id/btn_add_home2"
+        android:layout_width="310px"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Home + 2"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Button
+        android:id="@+id/btn_add_home3"
+        android:layout_width="310px"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Home + 3"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toEndOf="@id/btn_add_home2" />
+
+    <TextView
+        android:id="@+id/txt_away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#fff"/>
+
+    <ImageView
+        android:id="@+id/away_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_away"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/score_away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toTopOf="@+id/away_logo"
+        app:layout_constraintTop_toBottomOf="@id/btn_add_away2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#fff"/>
+
+    <Button
+        android:id="@+id/btn_add_away1"
+        android:layout_width="310px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Away + 1"
+        app:layout_constraintEnd_toStartOf="@id/btn_add_away2"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+    <Button
+        android:id="@+id/btn_add_away2"
+        android:layout_width="310px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Away + 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+    <Button
+        android:id="@+id/btn_add_away3"
+        android:layout_width="310px"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Away + 3"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:layout_constraintStart_toEndOf="@id/btn_add_away2" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <Button
+            android:id="@+id/btn_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#12FF01"
+            android:text="Cek Hasil"/>
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF2C2C"
+            android:text="Reset"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
